@@ -1,0 +1,8 @@
+*.pyc
+.settings/org.eclipse.core.resources.prefs
+.pydevproject
+.swp
+.DS_Store
+.project
+.tags
+.tags_sorted_by_file
