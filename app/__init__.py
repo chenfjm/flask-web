@@ -8,13 +8,14 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(CONFIG['dev'])
 
-    from ucenter import uc as ucenter_blueprint
-    app.register_blueprint(ucenter_blueprint, url_prefix='/uc')
+    from sms import sms
+    from ucenter import uc
+    from acc import acc
+    from pay import pay
 
-    from acc import acc as acc_blueprint
-    app.register_blueprint(acc_blueprint, url_prefix='/acc')
-
-    from pay import pay as pay_blueprint
-    app.register_blueprint(pay_blueprint, url_prefix='/pay')
+    app.register_blueprint(sms, url_prefix='/sms')
+    app.register_blueprint(uc, url_prefix='/uc')
+    app.register_blueprint(acc, url_prefix='/acc')
+    app.register_blueprint(pay, url_prefix='/pay')
 
     return app
