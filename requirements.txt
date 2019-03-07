@@ -1,0 +1,16 @@
+supervisor
+MySQL-python
+flask-restful
+requests
+pytest
+qiniu
+redis
+qrcode
+amqp
+M2Crypto
+crypto
+pycrypto
+pyOpenSSL
+apscheduler
+xlwt
+xlrd

@@ -3,6 +3,6 @@
 
 from flask import Blueprint
 
-uc = Blueprint('ucenter', __name__)
+addr = Blueprint('address', __name__)
 
-from user import views
+from address import views

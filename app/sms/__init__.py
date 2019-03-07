@@ -3,6 +3,6 @@
 
 from flask import Blueprint
 
-sms = Blueprint('sms', __name__)
+sms_bp = Blueprint('sms', __name__)
 
 import views

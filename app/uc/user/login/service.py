@@ -20,7 +20,7 @@ class LoginService(object):
             return ECode.PHONE_INVALID, None
 
         # 验证手机验证码
-        if not self.pcode_srv.verify_pcode(phone, pcode) and pcode != "666666":
+        if not self.pcode_srv.verify_pcode(phone, pcode) and pcode != '666666':
             return ECode.PCODE_WRONG, None
 
         # 绑定的手机号是否存在
