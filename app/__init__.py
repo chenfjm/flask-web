@@ -12,12 +12,10 @@ def create_app():
     from uc import uc
     from acc import acc
     from pay import pay
-    from addr import addr
 
     app.register_blueprint(sms_bp, url_prefix='/sms')
     app.register_blueprint(uc, url_prefix='/uc')
     app.register_blueprint(acc, url_prefix='/acc')
     app.register_blueprint(pay, url_prefix='/pay')
-    app.register_blueprint(addr, url_prefix='/address')
 
     return app

@@ -21,7 +21,15 @@ REDIS_CNF = {
     },
 }
 
-SMS_CONF = {
+AUTH_CNF = {
+    "cookie_name": "session_id",
+    "cookie_secret": "cccaUI5QAGaDdkL5gEmGeJJFuYh7EQnp2Xdwww",
+    "domain": "",
+    "user": "session_user",
+    "auth": "session_auth",
+}
+
+SMS_CNF = {
     'KEY_ID': '',
     'KEY_SECRET': '',
     'TEMPLATE': ''

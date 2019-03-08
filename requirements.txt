@@ -1,5 +1,6 @@
 supervisor
 MySQL-python
+flask-sqlalchemy
 flask-restful
 requests
 pytest

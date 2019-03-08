@@ -26,8 +26,8 @@ class SmsService(object):
         self.ctx = Context.inst()
         self.cache = self.ctx.cache
         self.valid_srv = Validate()
-        SMS_CONF = current_app.config.get('SMS_CONF')
-        self.sms_srv = SMS(a_key_id=SMS_CONF['KEY_ID'], a_key_secret=SMS_CONF['KEY_SECRET'])
+        SMS_CNF = current_app.config.get('SMS_CNF')
+        self.sms_srv = SMS(a_key_id=SMS_CNF['KEY_ID'], a_key_secret=SMS_CNF['KEY_SECRET'])
 
     def check_frequency_restrict(self, phone):
         '''
@@ -102,8 +102,8 @@ class SmsService(object):
         '''
         发送验证码
         '''
-        SMS_CONF = current_app.config.get('SMS_CONF')
-        self.sms_srv.send_sms(phone, '真品源', SMS_CONF['TEMPLATE'], {'code': pcode})
+        SMS_CNF = current_app.config.get('SMS_CNF')
+        self.sms_srv.send_sms(phone, '真品源', SMS_CNF['TEMPLATE'], {'code': pcode})
 
     def get_pcode(self, phone):
         '''
